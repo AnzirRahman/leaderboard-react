@@ -25,8 +25,13 @@
 }
 
 /* Hero styling */
-.hero-title {
-	width: 40rem;
+.hero-title-img {
+	display: flex;
+}
+
+.hero-title,
+.hero-img {
+	width: 30rem;
 }
 
 .hero-container {
@@ -837,6 +842,18 @@ tbody {
 		width: 100%;
 		padding: 0;
 	}
+
+	.hero-title-img {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hero-img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+
 	.hero-title {
 		width: 90vw;
 		max-width: 100%;
@@ -928,6 +945,11 @@ tbody {
 }
 
 @media (max-width: 600px) {
+	.hero-title-img {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.hero-title {
 		font-size: 1.2rem;
 		width: 95vw;

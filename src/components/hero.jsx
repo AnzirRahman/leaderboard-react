@@ -3,6 +3,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import welcomeToLeaderboard from "../assets/welcome-to-leaderboard.svg";
+import heroImg from "../assets/hero-img.png";
 import "../styles/global.css";
 import isLoggedIn, { handleCheckNow } from "../common/isloggedin";
 import useIsLoggedIn from "../common/isloggedin";
@@ -15,11 +16,18 @@ const Hero = () => {
 		<div id="hero">
 			<div className="section-container hero-container">
 				<div className="hero-main">
-					<img
-						className="hero-title"
-						src={welcomeToLeaderboard}
-						alt="Welcome to LeaderBoard"
-					/>
+					<div className="hero-title-img">
+						<img
+							className="hero-title"
+							src={welcomeToLeaderboard}
+							alt="Welcome to LeaderBoard"
+						/>
+						<img
+							className="hero-img"
+							src={heroImg}
+							alt="Tons of throphies"
+						/>
+					</div>
 					<p className="hero-text">
 						Join the LeaderBoard community and track your progress with ease.
 						Stay motivated and achieve your goals with our comprehensive
