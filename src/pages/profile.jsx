@@ -140,7 +140,27 @@ const Profile = () => {
 										marginBottom: 24,
 									}}>
 									<div className="profile-picture-wrapper enhanced-profile-pic">
-										<RandomChar />
+										{studentData.profilePicture ? (
+											<img
+												src={studentData.profilePicture}
+												alt="Profile"
+												style={{
+													width: "100%",
+													height: "100%",
+													borderRadius: "50%",
+													objectFit: "cover",
+												}}
+												onError={(e) => {
+													e.target.onerror = null;
+													e.target.src = undefined;
+												}}
+											/>
+										) : (
+											<RandomChar
+												name={studentData["student-name"]}
+												size={96}
+											/>
+										)}
 									</div>
 									<h2
 										style={{
